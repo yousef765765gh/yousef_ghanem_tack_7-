@@ -64,6 +64,7 @@ let products = [
     } ,
 ]
 
+//عناصر dom
 
 const DashboardLink = document.getElementById('Dashboard_link');
 const MarketLink = document.getElementById('Market_link');
@@ -84,13 +85,15 @@ const addForm = document.getElementById('Add_pro');
 
 let nextProductId = products.length + 1;
 
+//متغيرات الفلترة
 let currentCategoryFilter = 'All';
 let currentSearchTerm = '';
 let currentSortOption = 'default';
-
+//متغيرات السلايدر
 let currentSlide = 0;
+let offset = 0;
 let filteredItems = [];
-
+//تحميل الصفحة
 document.addEventListener('DOMContentLoaded' , function(){
     const storedProducts = localStorage.getItem('products');
     if (storedProducts) {
@@ -108,7 +111,7 @@ function loudapp(){
     readproductstabel()
     }
 }
-
+//احداث صفحة المتجر
 function setUpEvent(){
 
     searchbtn.addEventListener('click' , search);
@@ -135,11 +138,12 @@ function setUpEvent(){
     prevBtn.addEventListener('click', slideLeft);
     nextBtn.addEventListener('click', slideRight);
 }
+//البحث
 function search(){
     currentSearchTerm = searchInput.value.trim()
     readproducts() ;
 }
-
+//الفلترة
 function filteredProducts(){
     return products.filter(product =>{
             const categoryMatch = currentCategoryFilter == 'All' || product.category == currentCategoryFilter;
@@ -150,6 +154,7 @@ function filteredProducts(){
                 return categoryMatch && searchMatch;
     })
 }
+//الترتيب حسب السعر
 function sortproducts(products){
     const sortedProducts = [...products];
             
@@ -160,6 +165,7 @@ function sortproducts(products){
             }
             return sortedProducts;
 }
+//تحميل الكروت في السلايدر
 function  readproducts () {
     container.innerHTML = '' ;
     filteredItems = filteredProducts()
@@ -189,6 +195,8 @@ function  readproducts () {
         `
     })
 }
+
+//تحميل المنتجات في لوحة التحكم
 function readproductstabel(){
     productsTableBody.innerHTML = "";
 
@@ -208,8 +216,7 @@ function readproductstabel(){
         `;
     });
 }
-
-let offset = 0;
+//تحريك السلايدر
 
 function slideRight() {
     if(offset==0){
@@ -252,7 +259,7 @@ let productImageInput,
 
     addForm.addEventListener('submit', add_edite_Product);
 }
-
+//الاضافة و التعديل
 function add_edite_Product(e) {
     e.preventDefault();
 
