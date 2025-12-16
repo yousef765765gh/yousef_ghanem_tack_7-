@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Online Market</h1>
+        <ul>
+            <li><a href="./index.html" class="nav-link" id="Market_link">Market</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="Dashboard" id="Dashboard">
+            <h2>Dashboard:</h2>
+            <div class="add_prodoct">
+                <form id="Add_pro">
+                    <h2  id="form_title">ِAdd New product:</h2>
+                    <div class="about_add">
+                        <label for="">Img:</label>
+                            <input type="url" placeholder="add url..." class="to_add">
+                        <label for="">Name product:</label>
+                            <input type="text" placeholder="add name..." class="to_add"  required>
+                        <label for="">category:</label>
+                            <select name="" id="" class="to_add">
+                                <option value="">Add product</option>
+                                <option value="clothes">clothes</option>
+                                <option value="Electrical">Electrical</option>
+                            </select>
+                        <label for="">price:</label>
+                            <input type="number" placeholder="add price ..." class="to_add"  required>
+                    </div>
+                    <input type="submit" value="Save" class="submit" id="add">
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Available products:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>price</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-table-body">
+                        <!-- الاضافة في js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

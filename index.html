@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Online Market</h1>
+        <ul>
+            <li><a href="./admen.html" class="nav-link" id="Dashboard_link">Dashboard</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="Market" id="Market">
+            <h2>Market:</h2>
+            <div class="filterSection">
+                <div class="search_box">
+                    <button class="tosearch" id="searchbtn">Search</button>
+                    <input type="search" placeholder="search by name..." class="search" id="search_input">
+                </div>
+                <div class="FelterControls">
+                    <p><span>FILTERS:</span></p>
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="clothes">clothes</button>
+                    <button class="filter-btn" data-category="Electrical">Electrical</button>
+                    <select name="price" class=" price" id="price">
+                        <option value="default">According to the price </option>
+                        <option value="from the cheap"> from the cheap</option>
+                        <option value="from the expensive">from the expensive</option>
+                    </select>
+                </div>   
+                
+            </div>
+            <div class="products-section">
+                <h2>Available products:</h2>
+                <div id="no_products_msg" class="no_products_msg"><p>No products available.</p></div>
+                <div class="slider" id="slider">
+                    <button id="prev"><p><</p></button>
+                    <div class="contener_products" id="contener_product">
+                            <!-- اضافة منتجات -->
+                    </div>
+                    <button id="next"><p>></p></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 70px;
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#2c3e50 ;
+}
+
+body{
+    background-color: #f5f7fa;
+}
+
+h1{
+    color:white;
+}
+
+ul{
+    display: flex;
+    gap: 56px;
+    list-style: none;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        border: 3px solid white;
+        padding: 16px 30px;
+        border-radius: 16px;
+    }
+    a:active{
+        background-color: white;
+        color: black;
+    }
+}
+
+section h1 {
+    color: black;
+}
+
+section{
+    padding: 64px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .filterSection{
+        height: 160px; 
+        width: 80vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 32px;
+        background-color: white;
+        border-radius: 24px;
+        .tosearch{
+            width: 80px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: #3498db;
+            border: none;
+        }
+        .search{
+            width: 80%;
+            height: 32px;
+            border-color: #3498db;
+            border-radius: 16px;
+            padding: 16px;
+        }
+    }
+
+.FelterControls{
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    .filter-btn , .price{
+        padding: 8px 16px;
+        border-radius: 16px;
+        border: 2px solid #ddd;
+        background-color: white;
+    }
+    .filter-btn:hover{
+        border-color: #3498db;
+    }
+    .filter-btn:active{
+        background-color: #3498db;
+        color: white;
+    }
+    .price:hover{
+        border-color: #3498db;
+    }
+
+}
+
+.products-section{
+    padding-top: 64px;
+}
+.slider{
+    display: flex;
+    align-items: center;
+    button{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background-color: #2c3e50;
+        p{
+            color: white;
+            font-weight: 900;
+        }
+    }
+}
+
+h2{
+    padding-bottom: 64px;
+}
+
+.contener_products{
+    width: 78%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 32px;
+    padding: 32px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+    img {
+        width: 300px;
+        height: 250px;
+        border-radius: 16px;
+    }
+    h3{
+        padding: 16px;
+        color: #3498db;
+    }
+    p{
+        font-size: 24px;
+        padding: 16px;
+    }
+}
+
+.add_prodoct{
+    width: 80vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    background-color: white;
+    border-radius: 24px;
+}
+.no_products_msg{
+    font-size: 42px;
+    color: #2c3e50;
+    
+}
+.about_add{
+    display: flex;
+    gap: 16px;
+    .to_add{
+        width: 160px;
+        height: 24px;
+        padding: 0 8px;
+        border: 2px solid #3498db;
+        border-radius: 16px;
+    }
+}
+.submit{
+    width: 80px;
+    padding: 8px;
+    margin-top: 16px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 16px;
+
+}
+
+.table-container{
+    padding-top: 64px;
+    table{
+        width: 100%;
+        padding: 16px;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+        text-align: left;
+        thead{
+            background-color: #2c3e50;
+            color: white;
+        }
+    }
+    button{
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 16px;
+        color: white;
+    }
+}
+.edit_btn{
+    background-color:#3498db;
+    &:hover{
+        background-color: #366f96;
+    }
+}
+.delete_btn{
+    background-color: red;
+    &:hover{
+        background-color: rgb(185, 61, 61);
+    }
+}
+th , td{
+    font-size: 24px;
+    padding: 16px;
+}
+table tbody tr:hover{
+    background-color: #ddd;
+    transition: 1s all ;
+}
+
+.products-table {
+            width: 100%;
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
